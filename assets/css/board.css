@@ -440,7 +440,7 @@ ul li.separator {
 #notification {
   position: absolute;
   left: 323px;
-  width: 596px;
+  width: 610px;
   text-align: center;
   font-size: 18px;
   top: 625px;
@@ -456,14 +456,14 @@ body.state #notification {
   left: 323px;
   top: 20px;
   width: 596px;
-  height: 596px;
+  height: 610px;
 }
 .board-position {
   position: absolute !important;
   left: 323px;
   top: 20px;
   width: 596px;
-  height: 596px;
+  height: 610px;
   padding: 4px;
 }
 
