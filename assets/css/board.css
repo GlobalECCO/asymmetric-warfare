@@ -1032,6 +1032,11 @@ img.piece {
   font-size: 14px;
   overflow: scroll;
 }
+.history_entry .posKey {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+}
 .history_entry .placement {
   color: green;
 }
