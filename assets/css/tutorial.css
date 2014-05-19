@@ -57,6 +57,7 @@
       -ms-animation:pulse-size 1000ms ease-in-out infinite;
        -o-animation:pulse-size 1000ms ease-in-out infinite;
           animation:pulse-size 1000ms ease-in-out infinite;
+  z-index: 1000;
 }
 
 .stateTutorialBackground > .boundingBox {

@@ -1093,7 +1093,7 @@ img.piece {
   height: 70px;
   width: 264px;
 }
-#actions .action_img {
+.action_img {
   position: absolute;
   margin: auto;
   top: 0px;
