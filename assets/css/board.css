@@ -1195,9 +1195,9 @@ img.piece {
   border-width: 5px;
   border-color: blue;
   border-radius: 10px 10px 0px 0px;
-  width: 200px;
+  width: 250px;
   height: 40px;
-  left: 520px;
+  left: 495px;
   top: 625px;
 }
 
@@ -1220,5 +1220,11 @@ img.piece {
 .playbackContainer #playbackLast, .playbackContainer #playbackNext {
   float: right;
   border-radius: 0px 20px 20px 0px;
+}
+
+.playbackContainer #playbackCounter {
+  margin-left: 15px;
+  display: inline-block;
+  cursor: default;
 }
 
