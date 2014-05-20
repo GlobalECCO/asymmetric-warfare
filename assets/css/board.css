@@ -159,6 +159,7 @@ body.state #logo {
 
 #killed_insurgents {
   background: center left 10px no-repeat url("../images/insurgents_killed.png");
+  display: none;
 }
 #killed_insurgents #count {
   position: absolute;
@@ -171,6 +172,7 @@ body.state #logo {
 
 #reserve_insurgents {
   background: center left 10px no-repeat url("../images/insurgents_available.png");
+  display: none;
 }
 #reserve_insurgents #count {
   position: absolute;
@@ -184,6 +186,7 @@ body.state #logo {
 
 #moves_left {
   background: center left 10px no-repeat url("../images/moves_left.png");
+  display: none;
 }
 #moves_left #count {
   position: absolute;
@@ -1030,7 +1033,8 @@ img.piece {
   width: 261px;
   height: 434px;
   font-size: 14px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .history_entry .posKey {
   cursor: pointer;
@@ -1177,3 +1181,38 @@ img.piece {
   background: top left no-repeat url('../images/gameover_banner_insurgent.jpg');
   background-size: 100%;
 }
+
+.playbackContainer {
+  display: none;
+  position: absolute;
+  border-style: solid;
+  border-width: 5px;
+  border-color: blue;
+  border-radius: 10px 10px 0px 0px;
+  width: 200px;
+  height: 40px;
+  left: 520px;
+  top: 625px;
+}
+
+.playbackContainer .playbackControl {
+  width: 40px;
+  height: 36px;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: center;
+  border-style: solid;
+  border-width: 3px;
+  border-color: red;
+}
+
+.playbackContainer #playbackFirst, .playbackContainer #playbackPrev {
+  float: left;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.playbackContainer #playbackLast, .playbackContainer #playbackNext {
+  float: right;
+  border-radius: 0px 20px 20px 0px;
+}
+
