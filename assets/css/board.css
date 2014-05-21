@@ -712,6 +712,10 @@ img.piece {
   height: 17px;
 }
 
+img.visible {
+  content: url('../images/piece_insurgent_visible.png');
+}
+
 .board .content {
   text-align: center;
 }
