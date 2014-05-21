@@ -1033,7 +1033,7 @@ img.visible {
 }
 
 #history {
-  visibility: hidden;
+  visibility: visible;
   position: absolute;
   top: 464px;
   left: 25px;
