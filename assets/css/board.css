@@ -1199,25 +1199,35 @@ img.visible {
   user-select: none;
   display: none;
   position: absolute;
-  border-style: solid;
-  border-width: 5px;
-  border-color: blue;
-  border-radius: 10px 10px 0px 0px;
+  /*border-style: solid;*/
+  /*border-width: 5px;*/
+  /*border-color: blue;*/
+  /*border-radius: 10px 10px 10px 10px;*/
   width: 250px;
   height: 40px;
-  left: 495px;
-  top: 625px;
+  /*left: 495px;*/
+  /*top: 625px;*/
+  left: 30px;
+  top: 387px;
 }
 
 .playbackContainer .playbackControl {
   width: 40px;
   height: 36px;
   cursor: pointer;
-  text-align: center;
-  vertical-align: center;
   border-style: solid;
-  border-width: 3px;
-  border-color: red;
+  border-width: 5px;
+  border-color: white;
+}
+
+.playbackControl .label {
+  display: inline-block;
+  width: 100%;
+  height: 15px;
+  margin-top: 8px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .playbackContainer #playbackFirst, .playbackContainer #playbackPrev {
@@ -1231,7 +1241,25 @@ img.visible {
 }
 
 .playbackContainer #playbackCounter {
-  margin-left: 15px;
+  margin-left: 3px;
   display: inline-block;
   cursor: default;
+}
+
+.playbackContainer #playbackCounter .label {
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  margin-top: 0px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.playbackContainer #playbackCounter .label hr {
+  margin: -1px;
+  border-style: solid;
+}
+
+.playbackControl:hover {
+  background-color: lightblue;
 }
