@@ -164,7 +164,7 @@ body.state #logo {
 }
 #killed_insurgents #count {
   position: absolute;
-  top: 41px;
+  top: 37px;
   left: 150px;
   height: 10px;
   width: 30px;
@@ -177,7 +177,7 @@ body.state #logo {
 }
 #reserve_insurgents #count {
   position: absolute;
-  top: 42px;
+  top: 36px;
   left: 210px;
   height: 10px;
   width: 30px;
@@ -191,8 +191,8 @@ body.state #logo {
 }
 #moves_left #count {
   position: absolute;
-  top: 38px;
-  left: 130px;
+  top: 36px;
+  left: 150px;
   height: 10px;
   width: 30px;
   font-size: 20px;
