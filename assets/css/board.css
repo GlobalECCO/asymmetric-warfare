@@ -233,7 +233,7 @@ body.state #logo {
   height: 433px;
 }
 #chat_messages {
-  height: 137px;
+  height: 395px;
   overflow-y: scroll;
   overflow-x: hidden;
   padding: 3px 2px;
