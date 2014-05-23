@@ -461,15 +461,15 @@ body.state #notification {
   position: absolute !important;
   left: 323px;
   top: 20px;
-  width: 596px;
-  height: 610px;
+  width: 605px;
+  height: 605px;
 }
 .board-position {
   position: absolute !important;
   left: 323px;
   top: 20px;
-  width: 596px;
-  height: 610px;
+  width: 605px;
+  height: 605px;
   padding: 4px;
 }
 
