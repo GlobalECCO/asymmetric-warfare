@@ -1219,6 +1219,7 @@ img.visible {
   border-style: solid;
   border-width: 4px;
   border-color: white;
+  position: relative;
 }
 
 .playbackControl .label {
@@ -1233,12 +1234,22 @@ img.visible {
 
 .playbackContainer #playbackFirst, .playbackContainer #playbackPrev {
   float: left;
+}
+
+.playbackContainer #playbackFirst
+{
   border-radius: 20px 0px 0px 20px;
+  left: 4px;
 }
 
 .playbackContainer #playbackLast, .playbackContainer #playbackNext {
   float: right;
+}
+
+.playbackContainer #playbackLast
+{
   border-radius: 0px 20px 20px 0px;
+  right: 4px;
 }
 
 .playbackContainer #playbackCounter {
@@ -1260,3 +1271,32 @@ img.visible {
 .playbackControl:hover {
   background-color: lightblue;
 }
+
+.playbackContainer #playbackLast span.label, .playbackContainer #playbackNext span.label,
+.playbackContainer #playbackFirst span.label, .playbackContainer #playbackPrev span.label {
+  content: '';
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.playbackContainer #playbackFirst span.label
+{
+  background-image: url("../images/playback_first.png");
+}
+
+.playbackContainer #playbackPrev span.label
+{
+  background-image: url("../images/playback_prev.png");
+}
+
+.playbackContainer #playbackNext span.label
+{
+  background-image: url("../images/playback_next.png");
+}
+
+.playbackContainer #playbackLast span.label
+{
+  background-image: url("../images/playback_last.png");
+}
+
