@@ -23,10 +23,10 @@
       <h2>Roles</h2>
       <ul>
         <li>
-          Insurgents: <img src="images/piece_insurgent.png"/>
+          State: <img src="images/piece_state.png"/>
         </li>
         <li>
-          State: <img src="images/piece_state.png"/>
+          Insurgents: <img src="images/piece_insurgent.png"/>
         </li>
       </ul>
     </p>
@@ -43,7 +43,7 @@
     <p>
       <h2>Playing the Game</h2>
       <p>
-        The game is played in player-turns. The Insurgent goes first, followed by the State player. If a player wishes he can always PASS – he does nothing and the other player begins his turn.
+        The game is played in player-turns. The Insurgent first places their pieces and then the State player begins the game with the first move. If a player wishes he can always PASS – he does nothing and the other player begins his turn.
       </p>
 
       <p>
@@ -52,9 +52,10 @@
           The Insurgent can do both of these actions in his turn, once each:
           <ul>
             <li>GROW – Any space where the Insurgent has two or more of his pieces may Grow another piece. The new piece is placed either in that space or any adjacent space. The Insurgent can grow at most one piece per game turn. The green highlighted squares indicate where the grown insurgent may be placed: <img src="images/rules/grow.png" class="screenshot"/></li>
-            <li>MOVE – he may move one of his pieces two spaces, or two pieces one space each (from one space into any adjacent space). Moving a piece across a circle boundary (that is, directly towards or away from the Capital) counts as a two-space move. He may not enter the Capital.  If he moves a piece into a space where there already is one or more Insurgent pieces, or there is a State piece in it, then all pieces in that space are revealed to the State player, and that space remains visible to the State player for as long as it has at least two Insurgent pieces in it (or at least one State piece).</li>
+            <li>MOVE – each turn he is given two movement points to spend.  Moving a piece from one ring to another costs two points, while moving to an adjacent space within the same ring only costs one.  Insurgents may move as close as the Inner Circle, but can not enter the Capital.  If two or more pieces are in the same space at any time, all pieces on that space become visible to the State.
           </ul>
-          The Insurgent may Grow before Moving, or vice versa if he wants. He does not have to do both actions, but he may not Move, Grow, Move.
+          The Insurgent may Grow before Moving, or vice versa if he wants. He does not have to do both actions, but he may not Move, Grow, Move.  All Insurgent pieces that are revealed to the State will be highlighted with a pulsing red color while all spaces suspected through interrogation are highlighted with a solid red.
+          <img src="images/rules/interrogate-insurgents.png" class="screenshot"/>
         </p>
       </p>
       <p>
@@ -62,11 +63,11 @@
         <p>
           The State player can do both of these actions in his turn, once each.
           <ul>
-            <li>MOVE - he may move one of his pieces two spaces, or two pieces one space each (from one space into any adjacent space). Moving a piece across a circle boundary (that is, directly towards or away from the Capital, or into/out of the Capital) counts as a two-space move.. He may enter the Capital. There may be no more than THREE State pieces in the Inner Circle at any one time. If he moves a piece into a space that contains one or more Insurgent pieces, then all pieces in that space are revealed to the State player.</li>
+            <li>MOVE - each turn he is given two movement points to spend.  Moving a piece from one ring to another costs two points, while moving to an adjacent space within the same ring only costs one.  An exception to this is moving a piece to or from the Capital, which costs only one point.  If two or more Insurgent pieces are in the same space, or one of his pieces occupies the same space as an Insurgent, that space and all pieces inside it are revealed to him.
             <li>KILL or INTERROGATE – If a State piece moves into a space that contains one or more Insurgent pieces, or starts the turn in such a space, the State player can choose to either Kill or Interrogate the Insurgent pieces there (he can also choose to leave them alone: what’s in the space will still be visible but the Insurgent piece(s) is/are not otherwise affected). 
               <ul>
                 <li>If he chooses to Kill, then all Insurgent pieces in that space are immediately removed from the game.</li>
-                <li>If he chooses to Interrogate, then all Insurgents connected to the interrogate insurgent are revealed to him for one turn. In this image, the State piece to the left of the Capital has interrogated the insurgent occupying the same space. All connected insurgents have been revealed, and are shaded in grey. These grey markers will remain until the square is explored by the State player (note that the insurgents may have moved on already). <img src="images/rules/interrogate.png" class="screenshot"/></li>
+                <li>If he chooses to Interrogate, then all spaces adjacent to the interrogated piece will be marked with a grey marker to indicate any suspected Insurgents at that space for 3 turns.  In this image, the State piece to the left of the Capital has interrogated the insurgent occupying the same space. All connected insurgents have been marked with grey pieces. These grey markers will remain until the square is explored by the State player (note that the insurgents may have moved on already) or 3 turns have passed. <img src="images/rules/interrogate-state.png" class="screenshot"/></li>
               </ul>
             </li>
           </ul>
@@ -76,12 +77,16 @@
     </p>
     <p>
       <h2>Winning the Game</h2>
-      The Insurgent wins by capturing the Capital. This is accomplished by having, at the end of any his player-turns, Insurgent pieces occupying either:
+      The Insurgent wins by capturing the Capital. This is accomplished by having Insurgent pieces occupying either:
       <ul>
-        <li>four connected spaces in the Inner Circle (that is, there are at least four Insurgentoccupied spaces in the Inner Circle that also share a border with one or two other Insurgent-occupied spaces in the Inner Circle), or</li>
+        <li>four connected spaces in the Inner Circle (that is, there are at least four adjacent spaces in the Inner Circle occupied by Insurgents), or</li>
         <li>any six of the twelve spaces of the Inner Circle.</li>
       </ul>
-      The State player wins by killing 12 Insurgent pieces (making an Insurgent victory impossible).
+      The State player wins if it is impossible for the Insurgents to win, either by:
+      <ul>
+        <li>killing 12 Insurgent pieces, leaving Insurgents with only a maximum of 3 pieces left, or</li>
+        <li>killing all but one Insurgent pieces in play, disabling their ability to Grow new pieces.</li>
+      </ul>
     </p>
   </body>
 </html>
