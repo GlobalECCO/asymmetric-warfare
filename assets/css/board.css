@@ -84,6 +84,7 @@ body.state #table_area {
 #status.setup #setup {
   display: block;
   height: 100%;
+  cursor: default;
 }
 #status.your_move {
   background: top left no-repeat url("../images/your_move.png");
@@ -142,6 +143,14 @@ img.vertical-aligner {
   width: 260px;
 }
 
+.leftslot3 {
+  position: absolute;
+  top: 373px;
+  left: 25px;
+  height: 71px;
+  width: 260px;
+}
+
 body.insurgent #logo {
   background: top left no-repeat url("../images/logo_insurgent.png");
 }
@@ -151,10 +160,11 @@ body.state #logo {
 
 #killed_insurgents {
   background: center left 10px no-repeat url("../images/insurgents_killed.png");
+  display: none;
 }
 #killed_insurgents #count {
   position: absolute;
-  top: 41px;
+  top: 37px;
   left: 150px;
   height: 10px;
   width: 30px;
@@ -163,10 +173,11 @@ body.state #logo {
 
 #reserve_insurgents {
   background: center left 10px no-repeat url("../images/insurgents_available.png");
+  display: none;
 }
 #reserve_insurgents #count {
   position: absolute;
-  top: 42px;
+  top: 36px;
   left: 210px;
   height: 10px;
   width: 30px;
@@ -174,6 +185,18 @@ body.state #logo {
 }
 
 
+#moves_left {
+  background: center left 10px no-repeat url("../images/moves_left.png");
+  display: none;
+}
+#moves_left #count {
+  position: absolute;
+  top: 36px;
+  left: 150px;
+  height: 10px;
+  width: 30px;
+  font-size: 20px;
+}
 
 #left_area {
   position: absolute;
@@ -210,7 +233,7 @@ body.state #logo {
   height: 433px;
 }
 #chat_messages {
-  height: 137px;
+  height: 395px;
   overflow-y: scroll;
   overflow-x: hidden;
   padding: 3px 2px;
@@ -218,6 +241,7 @@ body.state #logo {
   font-size: 12px;
   font-weight: initial;
   color: white;
+  cursor: default;
 }
 #chat_input {
   color: white;
@@ -334,6 +358,7 @@ body.state #logo {
   font-size: 34px;
   font-family: Impact, Arial;
   text-shadow: 3px 3px 8px #000, -3px -3px 8px #000;
+  cursor: default;
 }
 .dialog {
   position: absolute;
@@ -421,7 +446,7 @@ ul li.separator {
 #notification {
   position: absolute;
   left: 323px;
-  width: 596px;
+  width: 610px;
   text-align: center;
   font-size: 18px;
   top: 625px;
@@ -436,15 +461,15 @@ body.state #notification {
   position: absolute !important;
   left: 323px;
   top: 20px;
-  width: 596px;
-  height: 596px;
+  width: 605px;
+  height: 605px;
 }
 .board-position {
   position: absolute !important;
   left: 323px;
   top: 20px;
-  width: 596px;
-  height: 596px;
+  width: 605px;
+  height: 605px;
   padding: 4px;
 }
 
@@ -688,6 +713,10 @@ img.piece {
 .marker3 img.piece {
   width: 17px;
   height: 17px;
+}
+
+img.visible {
+  content: url('../images/piece_insurgent_visible.png');
 }
 
 .board .content {
@@ -1004,14 +1033,21 @@ img.piece {
 }
 
 #history {
-  visibility: hidden;
+  visibility: visible;
   position: absolute;
   top: 464px;
   left: 25px;
   width: 261px;
   height: 434px;
   font-size: 14px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  cursor: default;
+}
+.history_entry .posKey {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
 }
 .history_entry .placement {
   color: green;
@@ -1069,7 +1105,7 @@ img.piece {
   height: 70px;
   width: 264px;
 }
-#actions .action_img {
+.action_img {
   position: absolute;
   margin: auto;
   top: 0px;
@@ -1153,3 +1189,114 @@ img.piece {
   background: top left no-repeat url('../images/gameover_banner_insurgent.jpg');
   background-size: 100%;
 }
+
+.playbackContainer {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: none;
+  position: absolute;
+  /*border-style: solid;*/
+  /*border-width: 5px;*/
+  /*border-color: blue;*/
+  /*border-radius: 10px 10px 10px 10px;*/
+  width: 250px;
+  height: 40px;
+  /*left: 495px;*/
+  /*top: 625px;*/
+  left: 30px;
+  top: 387px;
+}
+
+.playbackContainer .playbackControl {
+  width: 40px;
+  height: 36px;
+  cursor: pointer;
+  text-align: center;
+  border-style: solid;
+  border-width: 4px;
+  border-color: white;
+  position: relative;
+}
+
+.playbackControl .label {
+  display: inline-block;
+  width: 100%;
+  height: 15px;
+  margin-top: 8px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.playbackContainer #playbackFirst, .playbackContainer #playbackPrev {
+  float: left;
+}
+
+.playbackContainer #playbackFirst
+{
+  border-radius: 20px 0px 0px 20px;
+  left: 4px;
+}
+
+.playbackContainer #playbackLast, .playbackContainer #playbackNext {
+  float: right;
+}
+
+.playbackContainer #playbackLast
+{
+  border-radius: 0px 20px 20px 0px;
+  right: 4px;
+}
+
+.playbackContainer #playbackCounter {
+  margin-left: auto;
+  margin-right: auto;
+  cursor: default;
+}
+
+.playbackContainer #playbackCounter .label {
+  height: 35px;
+  margin-top: 0px;
+}
+
+.playbackContainer #playbackCounter .label hr {
+  margin: -1px;
+  border-style: solid;
+}
+
+.playbackControl:hover {
+  background-color: lightblue;
+}
+
+.playbackContainer #playbackLast span.label, .playbackContainer #playbackNext span.label,
+.playbackContainer #playbackFirst span.label, .playbackContainer #playbackPrev span.label {
+  content: '';
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.playbackContainer #playbackFirst span.label
+{
+  background-image: url("../images/playback_first.png");
+}
+
+.playbackContainer #playbackPrev span.label
+{
+  background-image: url("../images/playback_prev.png");
+}
+
+.playbackContainer #playbackNext span.label
+{
+  background-image: url("../images/playback_next.png");
+}
+
+.playbackContainer #playbackLast span.label
+{
+  background-image: url("../images/playback_last.png");
+}
+
