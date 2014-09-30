@@ -21,5 +21,7 @@ results
 node_modules
 npm-debug.log
 run.sh
-.idea
+.idea/
 bees-env.xml
+Launch Server.bat
+asymmetric-warfare.komodoproject
